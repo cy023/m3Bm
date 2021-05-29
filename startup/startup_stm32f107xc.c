@@ -11,7 +11,7 @@
  *      4. call main()
  */
 
-#include "STM32F107xC.h"
+#include "../src/STM32F107xC.h"
 
 #define SRAM_START  0x20000000
 #define SRAM_SIZE   (64 * 1024)
