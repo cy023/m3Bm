@@ -1,3 +1,10 @@
+/**
+ * @file   stm32f107xc.ld
+ * @author cy023
+ * @brief  stm32f107xc Linker Script
+ * @date   2021.05.31
+ */
+
 ENTRY(Reset_Handler)
 
 MEMORY

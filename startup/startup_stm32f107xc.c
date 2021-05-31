@@ -1,8 +1,8 @@
 /**
- * @file startup_stm32f107xc.c
+ * @file   startup_stm32f107xc.c
  * @author cy023
- * @brief Startup Module for STM32F107xC Microcontrollers
- * @date 2021.05.28
+ * @brief  Startup Module for STM32F107xC Microcontrollers
+ * @date   2021.05.28
  *
  * @brief 
  *      1. Create Vector table
@@ -11,7 +11,7 @@
  *      4. call main()
  */
 
-#include "../src/STM32F107xC.h"
+#include "../src/core_cm3.h"
 
 #define SRAM_START  0x20000000
 #define SRAM_SIZE   (64 * 1024)
