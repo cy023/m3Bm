@@ -452,68 +452,52 @@ typedef struct
 #define AHB_BASE            ((volatile uint32_t)0x40020000)
 
 // APB1
-#define TIM2_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00000000))
-#define TIM3_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00000400))
-#define TIM4_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00000800))
-#define TIM5_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00000C00))
-#define TIM6_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00001000))
-#define TIM7_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00001400))
-
-#define RTC_BASE            (*(volatile uint32_t *)(APB1_BASE + 0x00002800))
-#define WWDG_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00002C00))
-#define IWDG_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00003000))
-
-#define SPI2_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00003800))
-#define SPI3_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00003C00))
-#define I2S2_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00003800))
-#define I2S3_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00003C00))
-
-#define USART2_BASE         (*(volatile uint32_t *)(APB1_BASE + 0x00004400))
-#define USART3_BASE         (*(volatile uint32_t *)(APB1_BASE + 0x00004800))
-#define UART4_BASE          (*(volatile uint32_t *)(APB1_BASE + 0x00004C00))
-#define UART5_BASE          (*(volatile uint32_t *)(APB1_BASE + 0x00005000))
-#define I2C1_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00005400))
-#define I2C2_BASE           (*(volatile uint32_t *)(APB1_BASE + 0x00005800))
-
-#define bxCAN1_BASE         (*(volatile uint32_t *)(APB1_BASE + 0x00006400))
-#define bxCAN2_BASE         (*(volatile uint32_t *)(APB1_BASE + 0x00006800))
-#define BKP_BASE            (*(volatile uint32_t *)(APB1_BASE + 0x00006C00))
-#define PWR_BASE            (*(volatile uint32_t *)(APB1_BASE + 0x00007000))
-#define DAC_BASE            (*(volatile uint32_t *)(APB1_BASE + 0x00007400))
-
-
+#define TIM2                ((TIM_TypeDef *)(APB1_BASE + 0x00000000))
+#define TIM3                ((TIM_TypeDef *)(APB1_BASE + 0x00000400))
+#define TIM4                ((TIM_TypeDef *)(APB1_BASE + 0x00000800))
+#define TIM5                ((TIM_TypeDef *)(APB1_BASE + 0x00000C00))
+#define TIM6                ((TIM_TypeDef *)(APB1_BASE + 0x00001000))
+#define TIM7                ((TIM_TypeDef *)(APB1_BASE + 0x00001400))
+#define RTC                 ((RTC_TypeDef *)(APB1_BASE + 0x00002800))
+#define WWDG                ((WWDG_TypeDef *)(APB1_BASE + 0x00002C00))
+#define IWDG                ((IWDG_TypeDef *)(APB1_BASE + 0x00003000))
+#define SPI2                ((SPI_TypeDef *)(APB1_BASE + 0x00003800))
+#define SPI3                ((SPI_TypeDef *)(APB1_BASE + 0x00003C00))
+#define I2S2                ((SPI_TypeDef *)(APB1_BASE + 0x00003800))
+#define I2S3                ((SPI_TypeDef *)(APB1_BASE + 0x00003C00))
+#define USART2              ((USART_TypeDef *)(APB1_BASE + 0x00004400))
+#define USART3              ((USART_TypeDef *)(APB1_BASE + 0x00004800))
+#define UART4               ((USART_TypeDef *)(APB1_BASE + 0x00004C00))
+#define UART5               ((USART_TypeDef *)(APB1_BASE + 0x00005000))
+#define I2C1                ((I2C_TypeDef *)(APB1_BASE + 0x00005400))
+#define I2C2                ((I2C_TypeDef *)(APB1_BASE + 0x00005800))
+// #define bxCAN1              (( *)(APB1_BASE + 0x00006400))
+// #define bxCAN2              (( *)(APB1_BASE + 0x00006800))
+#define BKP                 ((BKP_TypeDef *)(APB1_BASE + 0x00006C00))
+#define PWR                 ((PWR_TypeDef *)(APB1_BASE + 0x00007000))
+#define DAC                 ((DAC_TypeDef *)(APB1_BASE + 0x00007400))
 
 // APB2
-#define AFIO_BASE           (*(volatile uint32_t *)(APB2_BASE + 0x00000000))
-#define EXTI_BASE           (*(volatile uint32_t *)(APB2_BASE + 0x00000400))
-#define PORTA_BASE          (*(volatile uint32_t *)(APB2_BASE + 0x00000800))
-#define PORTB_BASE          (*(volatile uint32_t *)(APB2_BASE + 0x00000C00))
-#define PORTC_BASE          (*(volatile uint32_t *)(APB2_BASE + 0x00001000))
-#define PORTD_BASE          (*(volatile uint32_t *)(APB2_BASE + 0x00001400))
-#define PORTE_BASE          (*(volatile uint32_t *)(APB2_BASE + 0x00001800))
-
-#define ADC1_BASE           (*(volatile uint32_t *)(APB2_BASE + 0x00002400))
-#define ADC2_BASE           (*(volatile uint32_t *)(APB2_BASE + 0x00002800))
-#define TIM1_BASE           (*(volatile uint32_t *)(APB2_BASE + 0x00002C00))
-#define SPI1_BASE           (*(volatile uint32_t *)(APB2_BASE + 0x00003000))
-
-#define USART1_BASE         (*(volatile uint32_t *)(APB2_BASE + 0x00003800))
-
-
+#define AFIO                ((AFIO_TypeDef *)(APB2_BASE + 0x00000000))
+#define EXTI                ((EXTI_TypeDef *)(APB2_BASE + 0x00000400))
+#define PORTA               ((GPIO_TypeDef *)(APB2_BASE + 0x00000800))
+#define PORTB               ((GPIO_TypeDef *)(APB2_BASE + 0x00000C00))
+#define PORTC               ((GPIO_TypeDef *)(APB2_BASE + 0x00001000))
+#define PORTD               ((GPIO_TypeDef *)(APB2_BASE + 0x00001400))
+#define PORTE               ((GPIO_TypeDef *)(APB2_BASE + 0x00001800))
+#define ADC1                ((ADC_TypeDef *)(APB2_BASE + 0x00002400))
+#define ADC2                ((ADC_TypeDef *)(APB2_BASE + 0x00002800))
+#define TIM1                ((TIM_TypeDef *)(APB2_BASE + 0x00002C00))
+#define SPI1                ((SPI_TypeDef *)(APB2_BASE + 0x00003000))
+#define USART1              ((USART_TypeDef *)(APB2_BASE + 0x00003800))
 
 // AHB
-#define DMA1_BASE           (*(volatile uint32_t *)(AHB_BASE + 0x00000000))
-#define DMA2_BASE           (*(volatile uint32_t *)(AHB_BASE + 0x00000400))
-
-#define RCC_BASE            (*(volatile uint32_t *)(AHB_BASE + 0x00001000))
-
-#define FLASH_IT_BASE       (*(volatile uint32_t *)(AHB_BASE + 0x00002000))
-
-#define CRC_BASE            (*(volatile uint32_t *)(AHB_BASE + 0x00003000))
-
-#define ETHERNET_BASE       (*(volatile uint32_t *)(AHB_BASE + 0x00008000))
-
-#define USB_OTG_FS_BASE     (*(volatile uint32_t *)(AHB_BASE + 0x0FFE0000))
-
+#define DMA1                ((DMA_TypeDef *)(AHB_BASE + 0x00000000))
+#define DMA2                ((DMA_TypeDef *)(AHB_BASE + 0x00000400))
+#define RCC                 ((RCC_TypeDef * *)(AHB_BASE + 0x00001000))
+// #define FLASH_IT            (( *)(AHB_BASE + 0x00002000))
+#define CRC                 ((CRC_TypeDef * *)(AHB_BASE + 0x00003000))
+#define ETHERNET            ((ETH_TypeDef * *)(AHB_BASE + 0x00008000))
+// #define USB_OTG_FS          (( *)(AHB_BASE + 0x0FFE0000))
 
 #endif /* __STM32F107xC_H */
