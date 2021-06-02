@@ -19,28 +19,7 @@
 #define __W      volatile        /* Defines 'write only' permissions     */
 #define __RW     volatile        /* Defines 'read / write' permissions   */
 
-
-
-/** 
-  * @brief 8. Connectivity line devices: reset and clock control (RCC)
-  * @ref   RM0008 Reference manual : 8.3.13 RCC register map
-  *         Table 19. RCC register map and reset values
-  */
-typedef struct
-{
-    __RW uint32_t CR;
-    __RW uint32_t CFGR;
-    __RW uint32_t CIR;
-    __RW uint32_t APB2RSTR;
-    __RW uint32_t APB1RSTR;
-    __RW uint32_t AHBENR;
-    __RW uint32_t APB2ENR;
-    __RW uint32_t APB1ENR;
-    __RW uint32_t BDCR;
-    __RW uint32_t CSR;
-    __RW uint32_t AHBRSTR;
-    __RW uint32_t CFGR2;
-} RCC_TypeDef;
+// TODO : CAN, USB, ...
 
 /** 
   * @brief  14. Advanced-control timers (TIM1 and TIM8)
@@ -84,7 +63,7 @@ typedef struct
 
 /** 
   * @brief  18. Real-time clock (RTC)
-  * @ref    1. RM0008 Reference manual : 18.4.7 RTC register map
+  * @ref    RM0008 Reference manual : 18.4.7 RTC register map
   *             Table 95. RTC register map and reset values
   */
 typedef struct
@@ -103,7 +82,7 @@ typedef struct
 
 /** 
   * @brief  20. Window watchdog (WWDG)
-  * @ref    1. RM0008 Reference manual : 20.6.4 WWDG register map
+  * @ref    RM0008 Reference manual : 20.6.4 WWDG register map
   *             Table 99. WWDG register map and reset values
   */
 typedef struct
@@ -115,7 +94,7 @@ typedef struct
 
 /** 
   * @brief  19. Independent watchdog (IWDG)
-  * @ref    1. RM0008 Reference manual : 19.4.5 IWDG register map
+  * @ref    RM0008 Reference manual : 19.4.5 IWDG register map
   *             Table 97. IWDG register map and reset values
   */
 typedef struct
@@ -128,7 +107,7 @@ typedef struct
 
 /** 
   * @brief  25. Serial peripheral interface (SPI)
-  * @ref    1. RM0008 Reference manual : 25.5.10 SPI register map
+  * @ref    RM0008 Reference manual : 25.5.10 SPI register map
   *             Table 187. SPI register map and reset values
   */
 typedef struct
@@ -145,9 +124,9 @@ typedef struct
 } SPI_TypeDef;
 
 /** 
-  * @brief 27. Universal synchronous asynchronous receiver transmitter (USART)
-  * @ref   RM0008 Reference manual : 27.6.8 USART register map
-  *         Table 198. USART register map and reset values
+  * @brief  27. Universal synchronous asynchronous receiver transmitter (USART)
+  * @ref    RM0008 Reference manual : 27.6.8 USART register map
+  *             Table 198. USART register map and reset values
   */
 typedef struct
 {
@@ -162,7 +141,7 @@ typedef struct
 
 /** 
   * @brief  26. Inter-integrated circuit (I2C) interface
-  * @ref    1. RM0008 Reference manual : 26.6.10 I2C register map
+  * @ref    RM0008 Reference manual : 26.6.10 I2C register map
   *             Table 190. I2C register map and reset values
   */
 typedef struct
@@ -178,63 +157,14 @@ typedef struct
     __RW uint32_t TRISE;
 } I2C_TypeDef;
 
-
-// typedef struct
-// {
-//     __RW uint32_t TIR;
-//     __RW uint32_t TDTR;
-//     __RW uint32_t TDLR;
-//     __RW uint32_t TDHR;
-// } CAN_TxMailBox_TypeDef;
-  
-// typedef struct
-// {
-//     __RW uint32_t RIR;
-//     __RW uint32_t RDTR;
-//     __RW uint32_t RDLR;
-//     __RW uint32_t RDHR;
-// } CAN_FIFOMailBox_TypeDef;
-  
-// typedef struct
-// {
-//     __RW uint32_t FR1;
-//     __RW uint32_t FR2;
-// } CAN_FilterRegister_TypeDef;
-  
-// typedef struct
-// {
-//     __RW uint32_t MCR;
-//     __RW uint32_t MSR;
-//     __RW uint32_t TSR;
-//     __RW uint32_t RF0R;
-//     __RW uint32_t RF1R;
-//     __RW uint32_t IER;
-//     __RW uint32_t ESR;
-//     __RW uint32_t BTR;
-//     uint32_t RESERVED0[88];
-//     CAN_TxMailBox_TypeDef sTxMailBox[3];
-//     CAN_FIFOMailBox_TypeDef sFIFOMailBox[2];
-//     uint32_t RESERVED1[12];
-//     __RW uint32_t FMR;
-//     __RW uint32_t FM1R;
-//     uint32_t RESERVED2;
-//     __RW uint32_t FS1R;
-//     uint32_t RESERVED3;
-//     __RW uint32_t FFA1R;
-//     uint32_t RESERVED4;
-//     __RW uint32_t FA1R;
-//     uint32_t RESERVED5[8];
-//     CAN_FilterRegister_TypeDef sFilterRegister[28];
-// } CAN_TypeDef;
-
 /** 
   * @brief  6. Backup registers (BKP)
-  * @ref    1. RM0008 Reference manual : 6.4.5 BKP register map
+  * @ref    RM0008 Reference manual : 6.4.5 BKP register map
   *             Table 17. BKP register map and reset values
   */
 typedef struct
 {
-  uint32_t RESERVED0;
+         uint32_t RESERVED0;
     __RW uint32_t DR1;
     __RW uint32_t DR2;
     __RW uint32_t DR3;
@@ -248,7 +178,7 @@ typedef struct
     __RW uint32_t RTCCR;
     __RW uint32_t CR;
     __RW uint32_t CSR;
-  uint32_t RESERVED1[2];
+         uint32_t RESERVED1[2];
     __RW uint32_t DR11;
     __RW uint32_t DR12;
     __RW uint32_t DR13;
@@ -285,7 +215,7 @@ typedef struct
 
 /** 
   * @brief  5. Power control (PWR)
-  * @ref    1. RM0008 Reference manual : 5.4.3 PWR register map
+  * @ref    RM0008 Reference manual : 5.4.3 PWR register map
   *             Table 16. PWR register map and reset values
   */
 typedef struct
@@ -296,7 +226,7 @@ typedef struct
 
 /** 
   * @brief  12. Digital-to-analog converter (DAC)
-  * @ref    1. RM0008 Reference manual : 12.5.14 DAC register map
+  * @ref    RM0008 Reference manual : 12.5.14 DAC register map
   *             Table 75. DAC register map
   */
 typedef struct
@@ -318,7 +248,7 @@ typedef struct
 
 /** 
   * @brief  10. Interrupts and events
-  * @ref    1. RM0008 Reference manual : 10.3.7 EXTI register map
+  * @ref    RM0008 Reference manual : 10.3.7 EXTI register map
   *             Table 64. External interrupt/event controller register map and reset values
   */
 typedef struct
@@ -353,7 +283,7 @@ typedef struct
     __RW uint32_t EVCR;
     __RW uint32_t MAPR;
     __RW uint32_t EXTICR[4];
-    uint32_t RESERVED0;
+         uint32_t RESERVED0;
     __RW uint32_t MAPR2;  
 } AFIO_TypeDef;
 
@@ -387,8 +317,132 @@ typedef struct
 } ADC_TypeDef;
 
 /** 
+  * @brief  13. Direct memory access controller (DMA)
+  * @ref    RM0008 Reference manual : 13.4.7 DMA register map
+  *             Table 80. DMA register map and reset values
+  */
+typedef struct
+{
+    __RW uint32_t CCR;
+    __RW uint32_t CNDTR;
+    __RW uint32_t CPAR;
+    __RW uint32_t CMAR;
+} DMA_Channel_TypeDef;
+
+typedef struct
+{
+    __RW uint32_t ISR;
+    __RW uint32_t IFCR;
+} DMA_TypeDef;
+
+/** 
+  * @brief  8. Connectivity line devices: reset and clock control (RCC)
+  * @ref    RM0008 Reference manual : 8.3.13 RCC register map
+  *             Table 19. RCC register map and reset values
+  */
+typedef struct
+{
+    __RW uint32_t CR;
+    __RW uint32_t CFGR;
+    __RW uint32_t CIR;
+    __RW uint32_t APB2RSTR;
+    __RW uint32_t APB1RSTR;
+    __RW uint32_t AHBENR;
+    __RW uint32_t APB2ENR;
+    __RW uint32_t APB1ENR;
+    __RW uint32_t BDCR;
+    __RW uint32_t CSR;
+    __RW uint32_t AHBRSTR;
+    __RW uint32_t CFGR2;
+} RCC_TypeDef;
+
+/** 
+  * @brief  4. CRC calculation unit
+  * @ref    RM0008 Reference manual : 4.4.4 CRC register map
+  *             Table 10. CRC calculation unit register map and reset values
+  */
+typedef struct
+{
+    __RW uint32_t DR;
+    __RW uint32_t IDR;
+    __RW uint32_t CR;
+} CRC_TypeDef;
+
+/** 
+  * @brief  29. Ethernet (ETH): media access control (MAC) with DMA controller
+  * @ref    RM0008 Reference manual : 29.8.5 Ethernet register maps
+  *             Table 218. Ethernet register map and reset values
+  */
+typedef struct
+{
+    __RW uint32_t MACCR;
+    __RW uint32_t MACFFR;
+    __RW uint32_t MACHTHR;
+    __RW uint32_t MACHTLR;
+    __RW uint32_t MACMIIAR;
+    __RW uint32_t MACMIIDR;
+    __RW uint32_t MACFCR;
+    __RW uint32_t MACVLANTR;
+         uint32_t RESERVED0[2];
+    __RW uint32_t MACRWUFFR;
+    __RW uint32_t MACPMTCSR;
+         uint32_t RESERVED1[2];
+    __RW uint32_t MACSR;
+    __RW uint32_t MACIMR;
+    __RW uint32_t MACA0HR;
+    __RW uint32_t MACA0LR;
+    __RW uint32_t MACA1HR;
+    __RW uint32_t MACA1LR;
+    __RW uint32_t MACA2HR;
+    __RW uint32_t MACA2LR;
+    __RW uint32_t MACA3HR;
+    __RW uint32_t MACA3LR;
+         uint32_t RESERVED2[40];
+    __RW uint32_t MMCCR;
+    __RW uint32_t MMCRIR;
+    __RW uint32_t MMCTIR;
+    __RW uint32_t MMCRIMR;
+    __RW uint32_t MMCTIMR;
+         uint32_t RESERVED3[14];
+    __RW uint32_t MMCTGFSCCR;
+    __RW uint32_t MMCTGFMSCCR;
+         uint32_t RESERVED4[5];
+    __RW uint32_t MMCTGFCR;
+         uint32_t RESERVED5[10];
+    __RW uint32_t MMCRFCECR;
+    __RW uint32_t MMCRFAECR;
+         uint32_t RESERVED6[10];
+    __RW uint32_t MMCRGUFCR;
+         uint32_t RESERVED7[334];
+    __RW uint32_t PTPTSCR;
+    __RW uint32_t PTPSSIR;
+    __RW uint32_t PTPTSHR;
+    __RW uint32_t PTPTSLR;
+    __RW uint32_t PTPTSHUR;
+    __RW uint32_t PTPTSLUR;
+    __RW uint32_t PTPTSAR;
+    __RW uint32_t PTPTTHR;
+    __RW uint32_t PTPTTLR;
+         uint32_t RESERVED8[567];
+    __RW uint32_t DMABMR;
+    __RW uint32_t DMATPDR;
+    __RW uint32_t DMARPDR;
+    __RW uint32_t DMARDLAR;
+    __RW uint32_t DMATDLAR;
+    __RW uint32_t DMASR;
+    __RW uint32_t DMAOMR;
+    __RW uint32_t DMAIER;
+    __RW uint32_t DMAMFBOCR;
+         uint32_t RESERVED9[9];
+    __RW uint32_t DMACHTDR;
+    __RW uint32_t DMACHRDR;
+    __RW uint32_t DMACHTBAR;
+    __RW uint32_t DMACHRBAR;
+} ETH_TypeDef;
+
+/** 
   * @brief Memory Map
-  * @ref   STM32F105xx, STM32F107xx (Datasheet) : 4 Memory mapping
+  * @ref   STM32F105xx, STM32F107xx (Datasheet) : 4. Memory mapping
   */
 #define FLASH_BASE          ((volatile uint32_t)0x08000000)
 #define SRAM_BASE           ((volatile uint32_t)0x20000000)
