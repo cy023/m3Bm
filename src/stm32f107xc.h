@@ -1,8 +1,6 @@
 /**
  * @file   stm32f107xc.h
  * @author cy023
- * @file   stm32f107xc.h
- * @author cy023
  * @brief  STM32F107xC Register Definitions
  * @ref    RM0008 Reference manual
  *         (https://www.st.com/en/microcontrollers-microprocessors/
