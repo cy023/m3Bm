@@ -1,6 +1,6 @@
 /**
  * @file   stm32f107xc.h
- * @author cy023/**
+ * @author cy023
  * @file   stm32f107xc.h
  * @author cy023
  * @brief  STM32F107xC Register Definitions
@@ -494,10 +494,10 @@ typedef struct
 // AHB
 #define DMA1                ((DMA_TypeDef *)(AHB_BASE + 0x00000000))
 #define DMA2                ((DMA_TypeDef *)(AHB_BASE + 0x00000400))
-#define RCC                 ((RCC_TypeDef * *)(AHB_BASE + 0x00001000))
+#define RCC                 ((RCC_TypeDef *)(AHB_BASE + 0x00001000))
 // #define FLASH_IT            (( *)(AHB_BASE + 0x00002000))
-#define CRC                 ((CRC_TypeDef * *)(AHB_BASE + 0x00003000))
-#define ETHERNET            ((ETH_TypeDef * *)(AHB_BASE + 0x00008000))
+#define CRC                 ((CRC_TypeDef *)(AHB_BASE + 0x00003000))
+#define ETHERNET            ((ETH_TypeDef *)(AHB_BASE + 0x00008000))
 // #define USB_OTG_FS          (( *)(AHB_BASE + 0x0FFE0000))
 
 #endif /* __STM32F107xC_H */
