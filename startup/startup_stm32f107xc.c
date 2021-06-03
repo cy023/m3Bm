@@ -212,7 +212,7 @@ static void copy_data_section()
 {
     uint8_t *src = (uint8_t *) &_la_data;
     uint8_t *des = (uint8_t *) &_sdata;
-    while (src < des) {
+    while (des < (uint8_t *) &_edata) {
         *des++ = *src++;
     }
 }
@@ -235,6 +235,8 @@ static void clear_bss_section()
  */
 void Default_Reset_Handler(void)
 {
+    VTOR = (uint32_t) vector;
+
     copy_data_section();
     clear_bss_section();
     main();
