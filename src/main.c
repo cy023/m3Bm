@@ -1,4 +1,6 @@
+#include "core_cm3.h"
 #include "stm32f107xc.h"
+#include "gpio.h"
 
 int global_uninit_var;
 int global_init0_var = 0;
@@ -17,6 +19,16 @@ int main(void)
     static int local_static_uninit_var;
     static int local_static_init0_var = 0;
     static int local_static_init_var = 77;
+
+    gpio_init();
+    gpio_off();
+
+    while (1) {
+        gpio_off();
+        delay_();
+        gpio_on();
+        delay_();
+    }
 
     return 0;
 }

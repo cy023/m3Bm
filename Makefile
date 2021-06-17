@@ -26,12 +26,11 @@ LDFLAGS  = -nostdlib
 LDFLAGS += -T startup/stm32f107xc.ld
 LDFLAGS += -Wl,-Map=$(PROJECT).map
 # LDFLAGS += -nostartfiles -Wl,-Map=$(PROJECT).map,--cref,--gc-sections
-# LDFLAGS += -lc -lgcc
-# LDFLAGS += -lm
-# LDFLAGS += -TStartup/stm32f107xc.ld
+LDFLAGS += -lc -lgcc
+LDFLAGS += -lm
 # LDFLAGS += -specs=nosys.specs --specs=nano.specs -flto
 
-CSRC   = main.c startup_stm32f107xc.c
+CSRC   = main.c startup_stm32f107xc.c gpio.c
 COBJ   = $(CSRC:.c=.o)
 COBJ  := $(addprefix $(BUILD)/,$(COBJ))
 VPATH  = src:startup
