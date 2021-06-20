@@ -235,7 +235,7 @@ static void clear_bss_section()
  */
 void Default_Reset_Handler(void)
 {
-    VTOR = (uint32_t) vector;
+    SCB_VTOR = (uint32_t) vector;
 
     copy_data_section();
     clear_bss_section();

@@ -136,26 +136,26 @@
  *   Chapter:  4.3 System control block
  *   Location: Page 4-11. Table 4-12 Summary of the system control block registers
  */
-#define ACTLR               (*(volatile uint32_t *)0xE000E008)
-#define CPUID               (*(volatile uint32_t *)0xE000ED00)
-#define ICSR                (*(volatile uint32_t *)0xE000ED04)
-#define VTOR                (*(volatile uint32_t *)0xE000ED08)
-#define AIRCR               (*(volatile uint32_t *)0xE000ED0C)
-#define SCR                 (*(volatile uint32_t *)0xE000ED10)
-#define CCR                 (*(volatile uint32_t *)0xE000ED14)
-#define SHPR                ( (volatile  uint8_t *)0xE000ED18)
-#define SHPR1               (*(volatile uint32_t *)0xE000ED18)
-#define SHPR2               (*(volatile uint32_t *)0xE000ED1C)
-#define SHPR3               (*(volatile uint32_t *)0xE000ED20)
-#define SHCRS               (*(volatile uint32_t *)0xE000ED24)
-#define CFSR                (*(volatile uint32_t *)0xE000ED28)
-#define MMSR                (*(volatile  uint8_t *)0xE000ED28)
-#define BFSR                (*(volatile  uint8_t *)0xE000ED29)
-#define UFSR                (*(volatile uint16_t *)0xE000ED2A)
-#define HFSR                (*(volatile uint32_t *)0xE000ED2C)
-#define MMAR                (*(volatile uint32_t *)0xE000ED34)
-#define BFAR                (*(volatile uint32_t *)0xE000ED38)
-#define AFSR                (*(volatile uint32_t *)0xE000ED3C)
+#define SCB_ACTLR               (*(volatile uint32_t *)0xE000E008)
+#define SCB_CPUID               (*(volatile uint32_t *)0xE000ED00)
+#define SCB_ICSR                (*(volatile uint32_t *)0xE000ED04)
+#define SCB_VTOR                (*(volatile uint32_t *)0xE000ED08)
+#define SCB_AIRCR               (*(volatile uint32_t *)0xE000ED0C)
+#define SCB_SCR                 (*(volatile uint32_t *)0xE000ED10)
+#define SCB_CCR                 (*(volatile uint32_t *)0xE000ED14)
+#define SCB_SHPR                ( (volatile  uint8_t *)0xE000ED18)
+#define SCB_SHPR1               (*(volatile uint32_t *)0xE000ED18)
+#define SCB_SHPR2               (*(volatile uint32_t *)0xE000ED1C)
+#define SCB_SHPR3               (*(volatile uint32_t *)0xE000ED20)
+#define SCB_SHCRS               (*(volatile uint32_t *)0xE000ED24)
+#define SCB_CFSR                (*(volatile uint32_t *)0xE000ED28)
+#define SCB_MMSR                (*(volatile  uint8_t *)0xE000ED28)
+#define SCB_BFSR                (*(volatile  uint8_t *)0xE000ED29)
+#define SCB_UFSR                (*(volatile uint16_t *)0xE000ED2A)
+#define SCB_HFSR                (*(volatile uint32_t *)0xE000ED2C)
+#define SCB_MMAR                (*(volatile uint32_t *)0xE000ED34)
+#define SCB_BFAR                (*(volatile uint32_t *)0xE000ED38)
+#define SCB_AFSR                (*(volatile uint32_t *)0xE000ED3C)
 
 /**
  * Cortex-M3 SYST
@@ -229,9 +229,9 @@
  * This secction define SCS registers which is not defined in
  * SCB section.
  */
-#define DFSR                (*(volatile uint32_t *)0xE000ED30)
-#define CPACR               (*(volatile uint32_t *)0xE000ED88)
-#define ICTR                (*(volatile uint32_t *)0xE000E004)
-#define ACTLR               (*(volatile uint32_t *)0xE000E008)
+#define SCS_DFSR                (*(volatile uint32_t *)0xE000ED30)
+#define SCS_CPACR               (*(volatile uint32_t *)0xE000ED88)
+#define SCS_ICTR                (*(volatile uint32_t *)0xE000E004)
+#define SCS_ACTLR               (*(volatile uint32_t *)0xE000E008)
 
 #endif /* __CORE_CM3_H */
